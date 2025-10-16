@@ -184,17 +184,17 @@ export default function CoursesPage() {
           <div className="flex flex-wrap justify-center gap-10">
             <div className="flex flex-col items-center">
               <Users className="w-8 h-8 mb-2" />
-              <div className="text-3xl font-bold">2500+</div>
+              <div className="text-3xl font-bold">100+</div>
               <div className="text-white/80">Étudiants</div>
             </div>
             <div className="flex flex-col items-center">
               <Award className="w-8 h-8 mb-2" />
-              <div className="text-3xl font-bold">98%</div>
+              <div className="text-3xl font-bold">90%</div>
               <div className="text-white/80">Satisfaction</div>
             </div>
             <div className="flex flex-col items-center">
               <Star className="w-8 h-8 mb-2" />
-              <div className="text-3xl font-bold">4.8/5</div>
+              <div className="text-3xl font-bold">4.5/5</div>
               <div className="text-white/80">Note moyenne</div>
             </div>
           </div>
