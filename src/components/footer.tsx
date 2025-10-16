@@ -12,18 +12,6 @@ export default function Footer() {
           </p>
         </div>
 
-        {/* Colonne 2 — Liens rapides */}
-        <div>
-          <h3 className="text-xl font-semibold mb-3">Liens utiles</h3>
-          <ul className="space-y-2 text-gray-200">
-            <li><a href="/" className="hover:underline">Accueil</a></li>
-            <li><a href="/courses" className="hover:underline">Cours</a></li>
-            <li><a href="/auth/signin" className="hover:underline">Connexion</a></li>
-            <li><a href="/auth/signup" className="hover:underline">Inscription</a></li>
-            <li><a href="/profile" className="hover:underline">Mon profil</a></li>
-          </ul>
-        </div>
-
         {/* Colonne 3 — Réseaux sociaux */}
         <div>
           <h3 className="text-xl font-semibold mb-3">Nous suivre</h3>
