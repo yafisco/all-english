@@ -108,8 +108,8 @@ export default function Home() {
           Nos programmes sont conçus pour <span className="font-semibold text-blue-800">tous les styles d’apprenants</span> — 
           débutants, intermédiaires ou avancés.  
           Grâce à une pédagogie dynamique, des activités interactives et un suivi personnalisé, 
-          vous apprendrez à <span className="font-semibold">parler, comprendre et penser en anglais</span> 
-          avec plaisir et confiance.
+          vous apprendrez à <span className="font-semibold">parler, comprendre et penser en anglais </span> 
+            avec plaisir et confiance.
         </p>
         <p className="text-center max-w-3xl mx-auto text-gray-700 text-lg mt-4 leading-relaxed">
           Nos enseignants passionnés vous guident pas à pas dans un environnement bienveillant et motivant.  
@@ -125,7 +125,7 @@ export default function Home() {
       {/* ====== Section : Cours populaires ====== */}
       <section className="mt-16">
         <h2 className="text-3xl font-bold mb-6 text-blue-800 text-center">
-          CHOISISSEZ UN PROGRAMME ADAPTÉ À VOTRE PROFIL
+           NOS PROGRAMMES DE FORMATIONS 
         </h2>
 
 

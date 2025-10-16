@@ -6,10 +6,11 @@ import Courses from "./pages/courses";
 import CourseDetail from "./pages/courseDetail";
 import SignIn from "./pages/Auth/SignIN";
 import SignUp from "./pages/Auth/SignUp";
-import About from "./pages/About"; // ✅ important
+import About from "./pages/About"; 
 import Profile from "./pages/profile";
 import CategorieList from "./pages/CategorieList";
 import Footer from "./components/footer";
+import Contact from "./pages/contact";
 
 export default function App() {
   return (
@@ -27,6 +28,7 @@ export default function App() {
             <Route path="/auth/signup" element={<SignUp />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>
 
