@@ -26,10 +26,10 @@ export default function CoursesPage() {
         "Maîtrisez le vocabulaire technique et communiquez efficacement dans l'univers IT",
       level: "Tous niveaux",
       duration: "12 semaines",
-      students: 456,
+      students: 20,
       rating: 4.9,
       lessons: 48,
-      price: "89 000 FCFA",
+      price: "30 000 FCFA",
       icon: Monitor,
       color: "from-blue-500 to-cyan-500",
       features: [
@@ -49,10 +49,10 @@ export default function CoursesPage() {
         "Développez vos compétences en anglais pour la vie quotidienne et les voyages",
       level: "Débutant à Avancé",
       duration: "16 semaines",
-      students: 892,
+      students: 25,
       rating: 4.8,
       lessons: 64,
-      price: "75 000 FCFA",
+      price: "25 000 FCFA",
       icon: Globe,
       color: "from-green-500 to-emerald-500",
       features: [
@@ -75,7 +75,7 @@ export default function CoursesPage() {
       students: 634,
       rating: 4.9,
       lessons: 40,
-      price: "95 000 FCFA",
+      price: "35 000 FCFA",
       icon: Briefcase,
       color: "from-purple-500 to-pink-500",
       features: [
@@ -98,7 +98,7 @@ export default function CoursesPage() {
       students: 267,
       rating: 4.7,
       lessons: 32,
-      price: "85 000 FCFA",
+      price: "35 000 FCFA",
       icon: Monitor,
       color: "from-blue-500 to-cyan-500",
       features: [
@@ -121,7 +121,7 @@ export default function CoursesPage() {
       students: 521,
       rating: 4.8,
       lessons: 48,
-      price: "90 000 FCFA",
+      price: "40 000 FCFA",
       icon: Briefcase,
       color: "from-purple-500 to-pink-500",
       features: [
@@ -144,7 +144,7 @@ export default function CoursesPage() {
       students: 745,
       rating: 4.9,
       lessons: 32,
-      price: "65 000 FCFA",
+      price: "30 000 FCFA",
       icon: Globe,
       color: "from-green-500 to-emerald-500",
       features: [
