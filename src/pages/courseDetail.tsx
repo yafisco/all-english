@@ -6,6 +6,7 @@ import type { Course } from "../types";
 export default function CourseDetail() {
   const { id } = useParams<{ id: string }>();
   const [course, setCourse] = useState<Course | null>(null);
+  
 
   useEffect(() => {
     if (!id) return;

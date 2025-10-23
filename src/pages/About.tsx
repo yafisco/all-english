@@ -50,7 +50,7 @@ export default function apropos() {
       name: "KHALY NIANG",
       role: "Co-fondatrice & Responsable Communication",
       bio: "Spécialiste en communication interculturelle, elle crée des ponts entre les cultures anglophones et francophones.",
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop",
+      image: "",
       email: "emma@allenglishlovers.com",
       linkedin: "#",
       twitter: "#"
