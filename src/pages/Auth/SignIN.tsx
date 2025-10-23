@@ -19,20 +19,20 @@ export default function SignIn() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center px-4 py-8 relative overflow-hidden">
+    <div className="relative flex items-center justify-center min-h-screen px-4 py-8 overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50">
       {/* Effets décoratifs réduits */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
       <div className="absolute bottom-0 left-0 w-64 h-64 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDelay: "1s" }}></div>
 
-      <div className="w-full max-w-md relative">
-        <div className="bg-white backdrop-blur-lg rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+      <div className="relative w-full max-w-md">
+        <div className="overflow-hidden bg-white border border-gray-100 shadow-xl backdrop-blur-lg rounded-2xl">
           {/* En-tête compact */}
-          <div className="bg-gradient-to-r from-blue-600 to-purple-600 px-6 py-5 text-white text-center">
-            <div className="inline-flex items-center justify-center w-12 h-12 bg-white bg-opacity-20 rounded-xl mb-2">
+          <div className="px-6 py-5 text-center text-white bg-gradient-to-r from-blue-600 to-purple-600">
+            <div className="inline-flex items-center justify-center w-12 h-12 mb-2 bg-white bg-opacity-20 rounded-xl">
               <Lock className="w-6 h-6" />
             </div>
             <h1 className="text-2xl font-bold mb-0.5">Bon retour !</h1>
-            <p className="text-blue-100 text-sm">Connectez-vous à votre espace</p>
+            <p className="text-sm text-blue-100">Connectez-vous à votre espace</p>
           </div>
 
           <div className="px-6 py-5 space-y-4">
@@ -57,7 +57,7 @@ export default function SignIn() {
                   onBlur={() => setFocusedInput("")}
                 />
                 {email && (
-                  <CheckCircle2 className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-green-500" />
+                  <CheckCircle2 className="absolute w-4 h-4 text-green-500 -translate-y-1/2 right-3 top-1/2" />
                 )}
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function SignIn() {
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-blue-600 transition-colors"
+                  className="absolute text-gray-400 transition-colors -translate-y-1/2 right-3 top-1/2 hover:text-blue-600"
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
                 </button>
@@ -93,17 +93,17 @@ export default function SignIn() {
             </div>
 
             {/* Options */}
-            <div className="flex items-center justify-between text-xs pt-1">
+            <div className="flex items-center justify-between pt-1 text-xs">
               <label className="flex items-center gap-1.5 cursor-pointer group">
                 <input
                   type="checkbox"
                   className="w-3.5 h-3.5 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
-                <span className="text-gray-600 group-hover:text-gray-900 transition-colors">
+                <span className="text-gray-600 transition-colors group-hover:text-gray-900">
                   Se souvenir
                 </span>
               </label>
-              <a href="#" className="text-blue-600 hover:text-blue-700 font-medium transition-colors">
+              <a href="#" className="font-medium text-blue-600 transition-colors hover:text-blue-700">
                 Mot de passe oublié ?
               </a>
             </div>
@@ -116,13 +116,13 @@ export default function SignIn() {
             >
               {isLoading ? (
                 <>
-                  <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                  <div className="w-4 h-4 border-2 rounded-full border-white/30 border-t-white animate-spin"></div>
                   <span>Connexion...</span>
                 </>
               ) : (
                 <>
                   <span>Se connecter</span>
-                  <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </>
               )}
             </button>
@@ -133,7 +133,7 @@ export default function SignIn() {
                 <div className="w-full border-t border-gray-200"></div>
               </div>
               <div className="relative flex justify-center">
-                <span className="px-3 bg-white text-gray-500 text-xs">Ou continuer avec</span>
+                <span className="px-3 text-xs text-gray-500 bg-white">Ou continuer avec</span>
               </div>
             </div>
 
@@ -149,7 +149,7 @@ export default function SignIn() {
                   <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
                   <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
                 </svg>
-                <span className="text-gray-700 font-medium text-xs">Google</span>
+                <span className="text-xs font-medium text-gray-700">Google</span>
               </button>
 
               <button
@@ -159,16 +159,16 @@ export default function SignIn() {
                 <svg className="w-4 h-4" fill="#1877F2" viewBox="0 0 24 24">
                   <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
                 </svg>
-                <span className="text-gray-700 font-medium text-xs">Facebook</span>
+                <span className="text-xs font-medium text-gray-700">Facebook</span>
               </button>
             </div>
           </div>
 
           {/* Footer */}
           <div className="px-6 py-3.5 bg-gray-50 border-t border-gray-100">
-            <p className="text-center text-xs text-gray-600">
+            <p className="text-xs text-center text-gray-600">
               Pas encore de compte ?{" "}
-              <a href="#" className="text-blue-600 hover:text-blue-700 font-semibold transition-colors">
+              <a href="#" className="font-semibold text-blue-600 transition-colors hover:text-blue-700">
                 Créer un compte
               </a>
             </p>
@@ -176,7 +176,7 @@ export default function SignIn() {
         </div>
 
         {/* Badges */}
-        <div className="mt-4 flex justify-center items-center gap-4 text-xs text-gray-500">
+        <div className="flex items-center justify-center gap-4 mt-4 text-xs text-gray-500">
           <div className="flex items-center gap-1">
             <Lock className="w-3 h-3" />
             <span>Sécurisé</span>
