@@ -1,66 +1,86 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import Swal from "sweetalert2";
 
-const Settings: React.FC = () => {
+export default function Settings() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
   const handleChangePassword = () => {
+    if (!currentPassword || !newPassword || !confirmPassword) {
+      return Swal.fire({
+        icon: "warning",
+        title: "Champs obligatoires",
+        text: "Veuillez remplir tous les champs."
+      });
+    }
+
     if (newPassword !== confirmPassword) {
-      alert("Les nouveaux mots de passe ne correspondent pas !");
-      return;
+      return Swal.fire({
+        icon: "error",
+        title: "Erreur",
+        text: "Les mots de passe ne correspondent pas."
+      });
     }
 
-    const storedPassword = localStorage.getItem("adminPassword") || "admin123";
+    // ICI tu pourrais appeler une API pour sauvegarder en backend...
 
-    if (currentPassword !== storedPassword) {
-      alert("Mot de passe actuel incorrect !");
-      return;
-    }
+    Swal.fire({
+      icon: "success",
+      title: "Mot de passe mis à jour",
+      showConfirmButton: false,
+      timer: 1500
+    });
 
-    localStorage.setItem("adminPassword", newPassword);
-    alert("Mot de passe mis à jour avec succès !");
     setCurrentPassword("");
     setNewPassword("");
     setConfirmPassword("");
   };
 
   return (
-    <div>
-      <h2 className="text-2xl font-bold mb-6">Paramètres Admin</h2>
+    <div className="flex justify-center items-start pt-10 px-4">
+      <div className="w-full max-w-md bg-white p-6 rounded-xl shadow-lg border">
+        <h2 className="text-xl font-bold text-gray-900 mb-6 text-center">
+          Paramètres Administrateur
+        </h2>
 
-      <div className="p-6 bg-white rounded shadow max-w-md">
-        <h3 className="font-semibold mb-4">Changer mot de passe</h3>
+        <label className="block text-sm font-medium mb-1 text-gray-700">
+          Mot de passe actuel
+        </label>
         <input
           type="password"
-          placeholder="Mot de passe actuel"
           value={currentPassword}
           onChange={(e) => setCurrentPassword(e.target.value)}
-          className="block w-full mb-3 p-2 border rounded"
+          className="w-full mb-3 p-2.5 border text-black rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
+
+        <label className="block text-sm font-medium mb-1 text-gray-700">
+          Nouveau mot de passe
+        </label>
         <input
           type="password"
-          placeholder="Nouveau mot de passe"
           value={newPassword}
           onChange={(e) => setNewPassword(e.target.value)}
-          className="block w-full mb-3 p-2 border rounded"
+          className="w-full mb-3 p-2.5 border text-black rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
+
+        <label className="block text-sm font-medium mb-1 text-gray-700">
+          Confirmer le nouveau mot de passe
+        </label>
         <input
           type="password"
-          placeholder="Confirmer nouveau mot de passe"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
-          className="block w-full mb-4 p-2 border rounded"
+          className="w-full mb-5 p-2.5 border text-black rounded-lg bg-gray-50 focus:ring-2 focus:ring-blue-500 outline-none"
         />
+
         <button
           onClick={handleChangePassword}
-          className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+          className="w-full bg-blue-600 text-white py-2.5 rounded-lg font-medium hover:bg-blue-700 transition"
         >
           Enregistrer
         </button>
       </div>
     </div>
   );
-};
-
-export default Settings;
+}
