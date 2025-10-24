@@ -41,7 +41,7 @@ export default function apropos() {
       name: "PAPE ALE NGACK SAMB",
       role: "Co-fondateur & Directeur des Opérations",
       bio: "Expert en technologie éducative avec une vision pour rendre l'apprentissage de l'anglais accessible à tous.",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop",
+      image: "./public/al.png",
       email: "michael@allenglishlovers.com",
       linkedin: "#",
       twitter: "#"

@@ -52,13 +52,14 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white">
+    <footer className="bg-gradient-to-r from-blue-800 via-purple-700 to-pink-600 animate-gradient-x text-white">
+      {/* Container principal */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 gap-y-6 md:gap-y-0">
 
-          {/* Colonne 1 */}
-          <div>
-            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+          {/* Colonne 1 - Présentation */}
+          <div className="lg:col-span-1">
+            <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent animate-pulse">
               All English Lovers
             </h2>
             <p className="text-sm text-blue-100 leading-relaxed mb-4">
@@ -70,7 +71,27 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Colonne 3 */}
+          {/* Colonne 2 - Liens rapides */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-blue-400 rounded"></span>
+              Liens rapides
+            </h3>
+            <ul className="space-y-2">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
+                  <a
+                    href={link.href}
+                    className="text-sm text-blue-100 hover:text-white hover:underline transition-all duration-200"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Colonne 3 - Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
               <span className="w-1 h-6 bg-blue-400 rounded"></span>
@@ -95,29 +116,30 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Colonne 4 - Newsletter + Réseaux sociaux */}
-          <div className="flex flex-col justify-between h-full">
-            <div>
-              <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-                <span className="w-1 h-6 bg-blue-400 rounded"></span>
-                Restez connecté
-              </h3>
-              <p className="text-sm text-blue-100 mb-4">
-                Suivez-nous sur les réseaux sociaux pour ne rien manquer !
-              </p>
-              <div className="flex flex-wrap gap-3 mb-6">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm ${social.color} transition-all duration-200 transform hover:scale-110 hover:bg-opacity-20`}
-                  >
-                    <social.icon size={20} />
-                  </a>
-                ))}
-              </div>
+          {/* Colonne 4 - Newsletter & Réseaux sociaux */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
+              <span className="w-1 h-6 bg-blue-400 rounded"></span>
+              Restez connecté
+            </h3>
+            <p className="text-sm text-blue-100 mb-4">
+              Suivez-nous sur les réseaux sociaux pour ne rien manquer !
+            </p>
+
+            {/* Réseaux sociaux */}
+            <div className="flex flex-wrap gap-3 mb-6">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={`p-3 bg-white bg-opacity-10 rounded-lg backdrop-blur-sm ${social.color} transition-all duration-200 transform hover:scale-110 hover:-translate-y-1 hover:shadow-lg hover:bg-opacity-20`}
+                  aria-label={social.label}
+                >
+                  <social.icon size={20} />
+                </a>
+              ))}
             </div>
 
             <div className="bg-white bg-opacity-10 backdrop-blur-sm rounded-lg p-4">
@@ -125,15 +147,10 @@ export default function Footer() {
               <div className="flex gap-2">
                 <input
                   type="email"
-                  placeholder="Votre email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="flex-1 px-3 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder-blue-200 border border-blue-400 border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm"
+                  placeholder="Entrez votre email..."
+                  className="flex-1 px-3 py-2 rounded-lg bg-white bg-opacity-20 text-white placeholder:text-white/50 border border-blue-400 border-opacity-30 focus:outline-none focus:ring-2 focus:ring-blue-400 text-sm transition-all"
                 />
-                <button
-                  onClick={handleNewsletter}
-                  className="p-2 bg-blue-500 hover:bg-blue-600 rounded-lg transition-colors"
-                >
+                <button className="p-2 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 hover:from-pink-500 hover:to-purple-500 rounded-lg transition-all">
                   <Send size={18} />
                 </button>
               </div>

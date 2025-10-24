@@ -18,13 +18,13 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-white shadow-lg sticky top-0 z-50 backdrop-blur-sm bg-opacity-95">
+    <nav className="bg-white/20 shadow-lg sticky top-0 z-50 backdrop-blur-lg border-b border-white/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo et Nom */}
           <Link
             to="/"
-            className="flex items-center gap-3 group transition-transform hover:scale-105"
+            className="flex items-center gap-3 group transition-transform hover:scale-105 hover:rotate-3"
           >
             <div className="relative">
               <img
@@ -45,7 +45,7 @@ export default function Navbar() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
+                className="flex items-center gap-2 px-4 py-2 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-transform duration-200 transform hover:scale-105 font-medium"
               >
                 <link.icon size={18} />
                 <span>{link.label}</span>
@@ -59,7 +59,7 @@ export default function Navbar() {
               <>
                 <Link
                   to="/profile"
-                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
+                  className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg animate-gradient-x transition-all duration-500"
                 >
                   <User size={18} />
                   <span>{user.name}</span>
@@ -82,7 +82,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   to="/auth/signup"
-                  className="px-5 py-2 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-md hover:shadow-lg hover:from-blue-600 hover:to-blue-700 transition-all duration-200"
+                  className="px-5 py-2 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-md hover:shadow-lg animate-gradient-x transition-all duration-500"
                 >
                   S'inscrire
                 </Link>
@@ -102,7 +102,7 @@ export default function Navbar() {
 
         {/* Menu Mobile */}
         <div
-          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+          className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-500 ease-in-out ${
             isMenuOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
           }`}
         >
@@ -112,7 +112,7 @@ export default function Navbar() {
                 key={link.to}
                 to={link.to}
                 onClick={() => setIsMenuOpen(false)}
-                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all duration-200 font-medium"
+                className="flex items-center gap-3 px-4 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-transform duration-200 transform hover:scale-105 font-medium"
               >
                 <link.icon size={20} />
                 <span>{link.label}</span>
@@ -125,7 +125,7 @@ export default function Navbar() {
                   <Link
                     to="/profile"
                     onClick={() => setIsMenuOpen(false)}
-                    className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-md"
+                    className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-md animate-gradient-x"
                   >
                     <User size={20} />
                     <span>{user.name}</span>
@@ -153,7 +153,7 @@ export default function Navbar() {
                   <Link
                     to="/auth/signup"
                     onClick={() => setIsMenuOpen(false)}
-                    className="block px-4 py-3 text-center bg-gradient-to-r from-blue-500 to-blue-600 text-white font-semibold rounded-lg shadow-md"
+                    className="block px-4 py-3 text-center bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 text-white font-semibold rounded-lg shadow-md animate-gradient-x"
                   >
                     S'inscrire
                   </Link>
