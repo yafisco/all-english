@@ -71,26 +71,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Colonne 2 - Liens rapides */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
-              <span className="w-1 h-6 bg-blue-400 rounded"></span>
-              Liens rapides
-            </h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    className="text-sm text-blue-100 hover:text-white hover:underline transition-all duration-200"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Colonne 3 - Contact */}
           <div>
             <h3 className="text-lg font-semibold mb-4 flex items-center gap-2">
