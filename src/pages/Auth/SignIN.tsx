@@ -45,7 +45,7 @@ export default function SignIn() {
               <div className="relative">
                 <input
                   type="email"
-                  className={`w-full px-3.5 py-2.5 bg-gray-50 border-2 rounded-lg outline-none transition-all text-sm ${
+                  className={`w-full px-3.5 py-2.5 text-black bg-gray-50 border-2 rounded-lg outline-none transition-all text-sm ${
                     focusedInput === "email"
                       ? "border-blue-500 bg-white shadow-md shadow-blue-100"
                       : "border-gray-200 hover:border-gray-300"
@@ -71,7 +71,7 @@ export default function SignIn() {
               <div className="relative">
                 <input
                   type={showPassword ? "text" : "password"}
-                  className={`w-full px-3.5 py-2.5 bg-gray-50 border-2 rounded-lg outline-none transition-all text-sm ${
+                  className={`w-full px-3.5 py-2.5 text-black bg-gray-50 border-2 rounded-lg outline-none transition-all text-sm ${
                     focusedInput === "password"
                       ? "border-blue-500 bg-white shadow-md shadow-blue-100"
                       : "border-gray-200 hover:border-gray-300"
@@ -136,7 +136,7 @@ export default function SignIn() {
                 <span className="px-3 bg-white text-gray-500 text-xs">Ou continuer avec</span>
               </div>
             </div>
-
+              
             {/* Social */}
             <div className="grid grid-cols-2 gap-3">
               <button
